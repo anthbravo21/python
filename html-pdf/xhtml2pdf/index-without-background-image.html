@@ -1,0 +1,117 @@
+<html>
+  <style>
+    @page {
+      /* A4: 21cm x 29,7cm */
+      size: a4 portrait;
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: "Euclid Circular A";
+      src: url("./Euclid-Circular-A-Regular.ttf");
+    }
+
+    body {
+      margin: 0;
+      font-family: "Euclid Circular A", monospace;
+      font-size: 12px;
+      background: url("page-1.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .page-1 {
+      margin: 0;
+      padding: 0;
+      width: 21cm;
+    }
+
+    .page-1 .page-1__header {
+      width: 21cm;
+    }
+
+    .page-1__header .page-1__logo {
+      margin: 0;
+      padding: 0;
+      width: 21cm;
+      height: 5.2cm;
+    }
+
+    .page-1__header .page-1__title-container {
+      text-align: center;
+      font-size: 18px;
+      color: #545b7e;
+    }
+
+    .page-1__header .page-1__title-container .page-1__client-name {
+      color: #0d1332;
+      font-weight: bold;
+    }
+
+    .page-1__header .page-1__subtitle {
+      margin-top: 1cm;
+      margin-left: 4cm;
+      margin-right: 4cm;
+      font-size: 12px;
+      text-align: center;
+      color: #545b7e;
+    }
+
+    .page-1__header .page-1__subtitle .page-1__subtitle-highlighted {
+      font-size: 12px;
+      color: #81aaed;
+    }
+
+    .page-1__header .page-1__account-number {
+      margin-top: 1.5cm;
+      font-size: 11px;
+      text-align: center;
+      color: #545b7e;
+    }
+
+    .page-1__header
+      .page-1__account-number
+      .page-1__account-number-highlighted {
+      font-weight: bold;
+    }
+
+    .page-1__credit-card-overview-container {
+      /* margin-top: 1cm;
+      margin-left: 1.5cm;
+      margin-right: 1.5cm;
+      padding-bottom: 5cm;
+      border-radius: 10px; */
+
+      /* border: 1px solid #d1d4e0; */
+      /* background-color: #fdfdfe; */
+      background-image: url("card-overview-2.png");
+    }
+  </style>
+  <body>
+    <!-- without support css: border-radius, line-gradient.
+      Sin  svg -->
+    <div class="page-1">
+      <div class="page-1__header">
+        <img class="page-1__logo" src="./header.png" alt="image" />
+        <div class="page-1__title-container">
+          ¡Hola, <span class="page-1__client-name">{{name}}</span>!
+        </div>
+        <div class="page-1__subtitle">
+          En tu
+          <span class="page-1__subtitle-highlighted">estado de cuenta</span>
+          encontrarás toda la información que necesitas sobre tu Tarjeta de
+          Crédito iO del
+          <span class="page-1__subtitle-highlighted">{{startDate}}</span> hasta
+          el
+          <span class="page-1__subtitle-highlighted">{{endDate}}</span>
+        </div>
+        <div class="page-1__account-number">
+          Número de tarjeta de crédito:
+          <span class="page-1__account-number-highlighted"
+            >{{accountNumber}}</span
+          >
+        </div>
+        <div class="page-1__credit-card-overview-container">1</div>
+      </div>
+    </div>
+  </body>
+</html>
