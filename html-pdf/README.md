@@ -43,6 +43,7 @@ Decisión
 **Dependencias:**
 
 - pip install xhtml2pdf (0.2.8): Esta biblioteca nos permite generar un pdf a partir de un template en html.
+- pip3 install jinja2 (3.1.2): Esta biblioteca nos permitira reemplazar los palabras claves introducidas en el html.
 
 **Repositorio:**
 

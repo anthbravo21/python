@@ -14,6 +14,8 @@
       margin: 0;
       background-image: url("./page-2.png");
       background-opacity: 0.2;
+      margin-top: 5.2cm;
+      margin-bottom: 2cm;
     }
 
     @font-face {
@@ -109,7 +111,6 @@
     }
 
     .page-2__header .page-2__title-container {
-      padding-top: 5.2cm;
       text-align: center;
       font-size: 18px;
       color: #545b7e;
@@ -200,83 +201,26 @@
     <pdf:nextpage name="detail" />
     <div class="page-2">
       <div class="page-2__header">
-        <div></div>
         <div class="page-2__title-container">Ciclo de facturación:</div>
       </div>
       <div class="page-2__main">
         <table>
           <tr>
-            <td style="width: 14.28%">FECHA</td>
-            <td style="width: 14.28%">TIPO DE OPERACIÓN</td>
-            <td style="width: 14.28%">ESTABLECIMIENTO</td>
-            <td style="width: 14.28%"># CUOTAS</td>
-            <td style="width: 14.28%">S/</td>
-            <td style="width: 14.28%">US$</td>
-            <td style="width: 14.28%">TEA</td>
+            <td style="width: 20%">FECHA</td>
+            <td style="width: 20%">FECHA</td>
+            <td style="width: 20%">COMERCIO</td>
+            <td style="width: 20%">S/</td>
+            <td style="width: 20%">TEA</td>
           </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
+          {% for transaction in transactions %}
+          <tr>
+            <td style="width: 20%">{{transaction.consumer}}</td>
+            <td style="width: 20%">{{transaction.process}}</td>
+            <td style="width: 20%">{{transaction.commerce}}</td>
+            <td style="width: 20%">{{transaction.amount}}</td>
+            <td style="width: 20%">{{transaction.tea}}</td>
           </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
-          <tr style="height: 5cm">
-            <td style="width: 14.28%">07-Jul</td>
-            <td style="width: 14.28%">Pago de suscripción</td>
-            <td style="width: 14.28%">Disney Plus</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">--</td>
-            <td style="width: 14.28%">- $5.00</td>
-            <td style="width: 14.28%">21.70%</td>
-          </tr>
+          {% endfor %}
         </table>
       </div>
     </div>
